@@ -36,12 +36,21 @@
       <div style="margin-top: 40px; margin-left: 80px;" class="row ">
         <div class="col-4">
           <div id="list-example" class="list-group">
-            <a class="list-group-item list-group-item-action" href="#list-item-1">Agregar/Remover Secciones</a>
-            <a class="list-group-item list-group-item-action" href="#list-item-2">Mostrar/Esconder Secciones</a>
+            <button class="list-group-item list-group-item-action" href="#list-item-1" onclick="fnAddOrRemoveElements(`fnAddOrRemoveElements`);">Agregar/Remover Secciones</button>
+            <button class="list-group-item list-group-item-action" href="#list-item-2" onclick="fnShowHiddeData(`idMostrarEsconder`);">Mostrar/Esconder Secciones</button>
             <a class="list-group-item list-group-item-action" href="#list-item-3"> Filtrar Objetos</a>
-        
           </div>
         </div>
+      </div>
+
+      <div>
+        <p id="idAgregarRemover">
+        </p>
+        <p id="idMostrarEsconder" style="display: none;">
+          Mostramos y escondemos informacion sin necesidad de remover elementos HTML
+        </p>
+        <p id="idFiltrarObjetos">
+        </p>
       </div>
 
 
