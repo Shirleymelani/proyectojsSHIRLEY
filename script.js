@@ -24,3 +24,30 @@ function fnAddOrRemoveElements() {
         document.getElementById('idAgregarRemover').innerHTML = '';
     }
 };
+
+// Objetos
+let objAuto = {
+    "auto": "Ford",
+    "modelo": "Focus",
+    "color": "Rojo"
+}
+
+// Arrays
+let arrColores = ["negro", "blanco", "rojo", "azul"]
+
+// Metodos array
+function encontrarColor(color) {
+    let colorEncontrado = arrColores.find(elem => elem == color)
+    
+    
+    return colorEncontrado
+}
+
+// Encontrar color
+let colorImpreso = prompt("Escribí un color: ")
+
+if(encontrarColor(colorImpreso)){
+	alert("Se encontró el color!")
+} else {
+	alert("No se encontró el color :c")
+}
