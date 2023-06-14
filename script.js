@@ -39,15 +39,25 @@ let arrColores = ["negro", "blanco", "rojo", "azul"]
 function encontrarColor(color) {
     let colorEncontrado = arrColores.find(elem => elem == color)
     
-    
     return colorEncontrado
 }
 
-// Encontrar color
-let colorImpreso = prompt("Escribí un color: ")
 
-if(encontrarColor(colorImpreso)){
-	alert("Se encontró el color!")
-} else {
-	alert("No se encontró el color :c")
+
+function guardarStorage(params) {
+    // Encontrar color
+    let colorImpreso = document.getElementById("color")
+    // Nombre
+    let nombre = document.getElementById("name")
+
+    localStorage.setItem("saludo", "¡Hola, bienvenido/a!" + nombre)
+    localStorage.setItem("colorImpreso", colorImpreso)
+}
+
+function descubrirStorage() {
+    document.getElementById("parrafo").innerHTML = "El color que elegiste fue el " + colorImpreso
+}
+
+function borrarStorage() {
+    localStorage.clear()
 }
